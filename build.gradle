@@ -53,6 +53,15 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.7'
 }
 
-task stage {
-  dependsOn build
+task stage(type: Copy, dependsOn: [clean, build]) {
+    from jar.archivePath
+    into project.rootDir 
+    rename {
+        'zandra.jar'
+    }
+}
+stage.mustRunAfter(clean)
+
+clean << {
+    project.file('zandra.jar').delete()
 }
