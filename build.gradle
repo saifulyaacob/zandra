@@ -53,4 +53,6 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.7'
 }
 
-
+task stage {
+  dependsOn build
+}
