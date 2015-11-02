@@ -53,5 +53,5 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.7'
 }
 
-defaultTasks "clean", "build", "installApp"
-task stage(dependsOn: ['clean', "build", 'installApp'])
+defaultTasks "clean", "build", "installDist"
+task stage(dependsOn: ['clean', "build", 'installDist'])
