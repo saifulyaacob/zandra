@@ -54,5 +54,5 @@ task wrapper(type: Wrapper) {
 }
 
 task stage {
-  dependsOn build
+  dependsOn: ['clean', "build", 'installApp']
 }
