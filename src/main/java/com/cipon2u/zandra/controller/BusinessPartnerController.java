@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/bp")
 public class BusinessPartnerController {
 	
 	@ResponseBody
-	@RequestMapping(method=RequestMethod.GET)
+	 @RequestMapping("/")
 	public String index(){
 		return "hello world";
 	}
