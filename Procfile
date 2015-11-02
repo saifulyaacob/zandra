@@ -1,1 +1,1 @@
-web: java -jar -Dserver.port=$PORT zandra.jar
+web: java -jar -Dserver.port=$PORT zandra.war

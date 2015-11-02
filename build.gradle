@@ -57,11 +57,11 @@ task stage(type: Copy, dependsOn: [clean, build]) {
     from jar.archivePath
     into project.rootDir 
     rename {
-        'zandra.jar'
+        'zandra.war'
     }
 }
 stage.mustRunAfter(clean)
 
 clean << {
-    project.file('zandra.jar').delete()
+    project.file('zandra.war').delete()
 }
